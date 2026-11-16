@@ -1,0 +1,17 @@
+services:
+  vlc-fuzz:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    image: fuzzing101-vlc:ubuntu20.04
+    environment:
+      LOCAL_UID: ${LOCAL_UID:-1000}
+      LOCAL_GID: ${LOCAL_GID:-1000}
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp=unconfined
+    shm_size: 1gb
+    volumes:
+      - .:/work
+    working_dir: /work

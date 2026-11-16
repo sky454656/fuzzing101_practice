@@ -1,0 +1,44 @@
+# XML basic tokens
+lt="<"
+gt=">"
+slash="/"
+equals="="
+quote="\""
+squote="'"
+
+# XML declaration
+xml_decl="<?xml version=\"1.0\"?>"
+xml_decl_encoding="<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
+
+# Tags
+open_tag="<root>"
+close_tag="</root>"
+empty_tag="<root/>"
+attr="id=\"1\""
+
+# Comments / CDATA
+comment="<!-- comment -->"
+cdata="<![CDATA[test]]>"
+
+# DOCTYPE / DTD
+doctype="<!DOCTYPE root>"
+doctype_internal="<!DOCTYPE root [ ]>"
+element_decl="<!ELEMENT root (#PCDATA)>"
+attlist_decl="<!ATTLIST root id CDATA #IMPLIED>"
+entity_decl="<!ENTITY writer \"libxml2\">"
+entity_ref="&writer;"
+
+# Common XML entities
+amp="&amp;"
+lt_entity="&lt;"
+gt_entity="&gt;"
+quot_entity="&quot;"
+apos_entity="&apos;"
+
+# Processing instruction
+pi="<?xml-stylesheet type=\"text/xsl\" href=\"style.xsl\"?>"
+
+# Namespace
+xmlns="xmlns=\"http://example.com\""
+xmlns_prefixed="xmlns:x=\"http://example.com/x\""
+prefixed_tag="<x:root></x:root>"
